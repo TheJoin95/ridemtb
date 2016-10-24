@@ -64,8 +64,8 @@ jQuery(document).ready(function($) {
     //     });
     // }
 
-    if ($('#home-slider2').length) {
-        $('#home-slider2').owlCarousel({
+    if ($('#home-slider').length) {
+        $('#home-slider').owlCarousel({
             loop: true,
             dots: false,
             nav: false,
