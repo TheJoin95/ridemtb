@@ -1521,6 +1521,7 @@ ul ul,ol ol {
     z-index: 11;
     padding: 280px 0 170px;
     position: relative;
+    background-color: #151617;
 }
 
 #inner-error {
@@ -1528,6 +1529,7 @@ ul ul,ol ol {
     width: 100%;
     background: url(../images/banner/inner-bg-img-error1.jpg) top left no-repeat;
     background-size: cover;
+    background-color: #151617;
 }
 
 #inner-contact {
@@ -1535,6 +1537,7 @@ ul ul,ol ol {
     width: 100%;
     background: url(../images/banner/inner-bg-img-contact.jpg) top left no-repeat;
     background-size: cover;
+    background-color: #151617;
 }
 
 .inner-banner-outer {
@@ -2570,6 +2573,11 @@ ul ul,ol ol {
 
 .comments-holder>li:last-child {
     margin-bottom: 0;
+}
+
+.blog-list {
+    float: none !important;
+    margin: auto !important;
 }
 
 .blog-inner-outer .comments-holder2 {

@@ -49,9 +49,9 @@ jQuery(document).ready(function($) {
 
     if ($('#push, #close').length) {
         $('#push, #close').on('click', function() {
-            var $navigacia = $('body, #slide-menu')
-              , val = $navigacia.css('left') === '300px' ? '0px' : '300px';
-            $navigacia.animate({
+            var $navigation = $('body, #slide-menu')
+              , val = $navigation.css('left') === '300px' ? '0px' : '300px';
+            $navigation.animate({
                 left: val
             }, 500)
         });
