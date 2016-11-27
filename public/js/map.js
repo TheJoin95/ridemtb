@@ -5,6 +5,7 @@ jQuery(document).ready(function($) {
         var mapOptions = {
             zoom: 14,
             center: new google.maps.LatLng(43.8228376,11.1417166),
+            scrollwheel: false,
             styles: [{
                 "featureType": "landscape",
                 "elementType": "labels",
@@ -61,7 +62,7 @@ jQuery(document).ready(function($) {
                 }]
             }]
         };
-        var mapElement = document.getElementById('cp-map_v1');
+        var mapElement = document.getElementById('map_v1');
         var map = new google.maps.Map(mapElement,mapOptions);
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(43.8228376,11.1417166),

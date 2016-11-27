@@ -1,6 +1,11 @@
 jQuery(document).ready(function($) {
     "use strict";
 
+    $('img').each(function() {
+        if(!$(this).hasClass('no-replace'))
+            $(this).attr('src', 'http://fakeimg.pl/600x400');
+    });
+
     /* photogallery */
 
     $('a[data-rel]').each(function() {
@@ -8,14 +13,14 @@ jQuery(document).ready(function($) {
         $(".pretty-gallery a[rel^='prettyPhoto']").prettyPhoto();
     });
 
-    if ($('#cp_header-v1').length) {
-        var stickyNavTop = $('#cp_header-v1').offset().top;
+    if ($('#header-v1').length) {
+        var stickyNavTop = $('#header-v1').offset().top;
         var stickyNav = function() {
             var scrollTop = $(window).scrollTop();
             if (scrollTop > stickyNavTop) {
-                $('#cp_header-v1').addClass('cp_sticky');
+                $('#header-v1').addClass('sticky');
             } else {
-                $('#cp_header-v1').removeClass('cp_sticky');
+                $('#header-v1').removeClass('sticky');
             }
         }
         ;
@@ -25,14 +30,14 @@ jQuery(document).ready(function($) {
         });
     }
 
-    if ($('#cp_header-v3').length) {
-        var stickyNavTop = $('#cp_header-v3').offset().top;
+    if ($('#header-v3').length) {
+        var stickyNavTop = $('#header-v3').offset().top;
         var stickyNav = function() {
             var scrollTop = $(window).scrollTop();
             if (scrollTop > stickyNavTop) {
-                $('#cp_header-v3').addClass('cp_sticky');
+                $('#header-v3').addClass('sticky');
             } else {
-                $('#cp_header-v3').removeClass('cp_sticky');
+                $('#header-v3').removeClass('sticky');
             }
         }
         ;
@@ -44,7 +49,7 @@ jQuery(document).ready(function($) {
 
     if ($('#push, #close').length) {
         $('#push, #close').on('click', function() {
-            var $navigacia = $('body, #cp-slide-menu')
+            var $navigacia = $('body, #slide-menu')
               , val = $navigacia.css('left') === '300px' ? '0px' : '300px';
             $navigacia.animate({
                 left: val
@@ -100,8 +105,8 @@ jQuery(document).ready(function($) {
     //     });
     // }
 
-    if ($('#cp-time-slider').length) {
-        $('#cp-time-slider').owlCarousel({
+    if ($('#time-slider').length) {
+        $('#time-slider').owlCarousel({
             loop: true,
             dots: false,
             nav: false,
@@ -148,8 +153,8 @@ jQuery(document).ready(function($) {
         });
     }
 
-    if ($('#cp-team-slider').length) {
-        $('#cp-team-slider').owlCarousel({
+    if ($('#team-slider').length) {
+        $('#team-slider').owlCarousel({
             loop: true,
             dots: false,
             nav: true,
@@ -172,8 +177,8 @@ jQuery(document).ready(function($) {
         });
     }
     
-    if ($('#cp-testimonial-slider').length) {
-        $('#cp-testimonial-slider').owlCarousel({
+    if ($('#testimonial-slider').length) {
+        $('#testimonial-slider').owlCarousel({
             loop: true,
             dots: true,
             nav: false,
@@ -183,8 +188,8 @@ jQuery(document).ready(function($) {
             smartSpeed: 1500,
         });
     }
-    if ($('#cp-testimonial-slider2').length) {
-        $('#cp-testimonial-slider2').owlCarousel({
+    if ($('#testimonial-slider2').length) {
+        $('#testimonial-slider2').owlCarousel({
             loop: true,
             dots: true,
             nav: false,
@@ -194,8 +199,8 @@ jQuery(document).ready(function($) {
             smartSpeed: 1500,
         });
     }
-    if ($('#cp-blog-slider').length) {
-        $('#cp-blog-slider').owlCarousel({
+    if ($('#blog-slider').length) {
+        $('#blog-slider').owlCarousel({
             loop: true,
             dots: false,
             nav: true,
@@ -221,8 +226,8 @@ jQuery(document).ready(function($) {
             }
         });
     }
-    if ($('#cp-blog-slider2').length) {
-        $('#cp-blog-slider2').owlCarousel({
+    if ($('#blog-slider2').length) {
+        $('#blog-slider2').owlCarousel({
             loop: true,
             dots: false,
             nav: true,
@@ -245,8 +250,8 @@ jQuery(document).ready(function($) {
             }
         });
     }
-    if ($('#cp-testimonial-slider').length) {
-        $('#cp-testimonial-slider').owlCarousel({
+    if ($('#testimonial-slider').length) {
+        $('#testimonial-slider').owlCarousel({
             loop: true,
             dots: true,
             nav: false,
@@ -256,8 +261,8 @@ jQuery(document).ready(function($) {
             smartSpeed: 1500,
         });
     }
-    if ($('#cp-review-slider').length) {
-        $('#cp-review-slider').owlCarousel({
+    if ($('#review-slider').length) {
+        $('#review-slider').owlCarousel({
             loop: true,
             dots: false,
             nav: true,
@@ -267,8 +272,8 @@ jQuery(document).ready(function($) {
             smartSpeed: 1500,
         });
     }
-    if ($('#cp-product-slider1').length) {
-        $('#cp-product-slider1').owlCarousel({
+    if ($('#product-slider1').length) {
+        $('#product-slider1').owlCarousel({
             loop: true,
             dots: false,
             nav: true,
@@ -294,8 +299,8 @@ jQuery(document).ready(function($) {
             }
         });
     }
-    if ($('#cp-widget-slider').length) {
-        $('#cp-widget-slider').owlCarousel({
+    if ($('#widget-slider').length) {
+        $('#widget-slider').owlCarousel({
             loop: true,
             dots: true,
             nav: false,
@@ -305,15 +310,15 @@ jQuery(document).ready(function($) {
             smartSpeed: 1500,
         });
     }
-    if ($('#cp_product-slider').length) {
-        $('#cp_product-slider').bxSlider({
+    if ($('#product-slider').length) {
+        $('#product-slider').bxSlider({
             auto: true,
             pagerCustom: '#bx-pager',
             navigation: false,
         });
     }
-    if ($('#cp_product-slider2').length) {
-        $('#cp_product-slider2').bxSlider({
+    if ($('#product-slider2').length) {
+        $('#product-slider2').bxSlider({
             auto: true,
             pagerCustom: '#bx-pager2',
             navigation: false,
@@ -335,18 +340,18 @@ jQuery(document).ready(function($) {
             time: 1000
         });
     }
-    if ($('.cp-countdown').length) {
-        $('.cp-countdown').final_countdown({
+    if ($('.countdown').length) {
+        $('.countdown').final_countdown({
             'start': 1362139200,
             'end': 1388461320,
             'now': 1387461319
         });
     }
-    if ($(".cp-gallery-masonary .isotope").length) {
-        var $container = $('.cp-gallery-masonary .isotope');
+    if ($(".gallery-masonary .isotope").length) {
+        var $container = $('.gallery-masonary .isotope');
         $container.imagesLoaded(function() {
             $container.isotope({
-                itemSelector: '.cp-masonary-item',
+                itemSelector: '.masonary-item',
                 transitionDuration: '0.6s',
                 masonry: {
                     columnWidth: $container.width() / 12
@@ -362,11 +367,11 @@ jQuery(document).ready(function($) {
             });
         });
     }
-    if ($(".cp-blog-masonary .isotope").length) {
-        var $container = $('.cp-blog-masonary .isotope');
+    if ($(".blog-masonary .isotope").length) {
+        var $container = $('.blog-masonary .isotope');
         $container.imagesLoaded(function() {
             $container.isotope({
-                itemSelector: '.cp-masonary-item',
+                itemSelector: '.masonary-item',
                 transitionDuration: '0.6s',
                 masonry: {
                     columnWidth: $container.width() / 12
@@ -382,8 +387,8 @@ jQuery(document).ready(function($) {
             });
         });
     }
-    if ($('.cp_portfolioGallery').length) {
-        var $container = $('.cp_portfolioGallery');
+    if ($('.portfolioGallery').length) {
+        var $container = $('.portfolioGallery');
         $container.imagesLoaded(function() {
             $container.isotope({
                 filter: '*',
@@ -394,8 +399,8 @@ jQuery(document).ready(function($) {
                 }
             });
         });
-        $('.cp_galleryFilter a').on('click', function() {
-            $('.cp_galleryFilter .current').removeClass('current');
+        $('.galleryFilter a').on('click', function() {
+            $('.galleryFilter .current').removeClass('current');
             $(this).addClass('current');
             var selector = $(this).attr('data-filter');
             $container.isotope({
@@ -438,13 +443,14 @@ jQuery(document).ready(function($) {
             return false;
         });
     }
-    if ($('#cp-map_contact').length) {
+    if ($('#map_contact').length) {
         var map;
         var myLatLng = new google.maps.LatLng(43.8228376,11.1417166);
         var myOptions = {
             zoom: 12,
             center: myLatLng,
             zoomControl: true,
+            scrollWheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             mapTypeControl: false,
             styles: [{
@@ -452,7 +458,7 @@ jQuery(document).ready(function($) {
                 lightness: 10
             }],
         }
-        map = new google.maps.Map(document.getElementById('cp-map_contact'),myOptions);
+        map = new google.maps.Map(document.getElementById('map_contact'),myOptions);
         var marker = new google.maps.Marker({
             position: map.getCenter(),
             map: map,
@@ -460,8 +466,8 @@ jQuery(document).ready(function($) {
         });
         marker.getPosition();
     }
-    if ($('#cp-range-slider').length) {
-        $("#cp-range-slider").slider({
+    if ($('#range-slider').length) {
+        $("#range-slider").slider({
             range: true,
             min: 0,
             max: 500,
@@ -470,10 +476,10 @@ jQuery(document).ready(function($) {
                 $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             }
         });
-        $("#amount").val("$" + $("#cp-range-slider").slider("values", 0) + " - $" + $("#cp-range-slider").slider("values", 1));
+        $("#amount").val("$" + $("#range-slider").slider("values", 0) + " - $" + $("#range-slider").slider("values", 1));
     }
-    ;if ($('#cp-calendar').length) {
-        $('#cp-calendar').fullCalendar({
+    ;if ($('#calendar').length) {
+        $('#calendar').fullCalendar({
             defaultDate: '2016-05-12',
             editable: true,
             eventLimit: true,

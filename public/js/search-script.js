@@ -54,7 +54,7 @@
     }
 })(window);
 (function() {
-    var container = document.querySelector('div.cp-navigation-row')
+    var container = document.querySelector('div.navigation-row')
       , triggerBttn = document.getElementById('trigger-overlay')
       , overlay = document.querySelector('div.overlay')
       , closeBttn = overlay.querySelector('button.overlay-close');
